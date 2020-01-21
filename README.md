@@ -1,5 +1,6 @@
 # Projects-for-JnJ
 Showcases the Slot Machine and Parking Meter at TPA done in C.
+
 slot_machine.c - A slot machine that starts with an initial balance entered by
                  the user, then randomly generates 3 numbers per spin. Each spin
                  costs 5 cents and when there is a spin with 3 of the same symbols
