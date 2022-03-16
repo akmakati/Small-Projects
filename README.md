@@ -7,3 +7,5 @@ longterm_parking.c - Tampa International Airport offers long-term parking. The f
 Project-2-akmakati - Six data visualizations were created for a class project. A skeleton code for the JavaScript and HTML files were provided by the Professor. I utilized d3, JavaScript and HTML coding to create the six visualizations.
 
 a3 - A small project that demonstrated the use of queries and schemas in SQL.
+
+SmallEats_Mern-master - A project for a Software Engineering course at USF that involved creating a business that was practical and creating a website and databse to store information. The code was created in collaboration with 5 other students, we all worked together to get to the final state.
