@@ -1,4 +1,4 @@
-# Projects-for-JnJ
+# Small-Projects
 Showcases the Slot Machine and Parking Meter at TPA done in C.
 
 slot_machine.c - A slot machine that starts with an initial balance entered by
