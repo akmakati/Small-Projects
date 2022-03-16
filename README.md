@@ -8,4 +8,8 @@ Project-2-akmakati - Six data visualizations were created for a class project. A
 
 a3 - A small project that demonstrated the use of queries and schemas in SQL.
 
-SmallEats_Mern-master - A project for a Software Engineering course at USF that involved creating a business that was practical and creating a website and databse to store information. The code was created in collaboration with 5 other students, we all worked together to get to the final state.
+SmallEats_Mern-master - A project for a Software Engineering course at USF that involved creating a business that was practical and creating a website and databse to store information. The code was created in collaboration with 5 other students, we all worked together to get to the final state. This code includes HTML and JavaScript.
+
+PP5_Dijkstras_Algorithm - A project for a Data Structures couse at USF that solves Djikstra's Algorithm and it was coded in C++. This project was also done in collaboration with a teammate.
+
+Calculator - A calculator that was created utilizing Linked Lists in C++ to keep a running count for the previous and updated count.
