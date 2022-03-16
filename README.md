@@ -5,3 +5,5 @@ slot_machine.c - A slot machine that starts with an initial balance entered by t
 longterm_parking.c - Tampa International Airport offers long-term parking. The first 60 minutes are free; 61-80 minutes is $4; each additional 20 minutes is $2; and the max charged is $18 per day (24 hours). This program will calculate the amount due depending on the user-input of the hours parked and minutes parked.
 
 Project-2-akmakati - Six data visualizations were created for a class project. A skeleton code for the JavaScript and HTML files were provided by the Professor. I utilized d3, JavaScript and HTML coding to create the six visualizations.
+
+a3 - A small project that demonstrated the use of queries and schemas in SQL.
