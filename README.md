@@ -1,5 +1,7 @@
 # Small-Projects
 
+Most_Recent_Match_Information - Displays information about the most recent match played in League of Legends after requesting an inputted username. Utilizes Riots open APIs to fetch information using node.js.
+
 Data_Visualizations - Six data visualizations were created for a class project. A skeleton code for the JavaScript and HTML files were provided by the Professor. I utilized d3, JavaScript and HTML coding to create the six visualizations.
 
 SmallEats_Mern-master - A project for a Software Engineering course at USF that involved creating a business that was practical and creating a website and databse to store information. The code was created in collaboration with 5 other students, we all worked together to get to the final state. This code includes HTML and JavaScript.
