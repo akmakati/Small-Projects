@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v5.js"
+			integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
+			crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+
+    <!--*******************************************-->
+    <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+    <script src="js/sample_visualization.js"></script>
+    <script src="js/linechartWBST.js"></script>
+    <script src="js/scatterplotWBST.js"></script>
+    <script src="js/barchartWBST.js"></script>
+    <!--*******************************************-->
+
+    <title>CAP 4744/5745 - Interactive Data Visualization - Project 2</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Project 2: Akash Makati</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="calvin.html">Calvin College 2004</a></li>
+            <li class="nav-item"><a class="nav-link" href="iris.html">Iris Dataset</a></li>
+            <li class="nav-item"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
+            <li class="nav-item active"><a class="nav-link" href="wb_st.html">World Bank Data, Science-and-Technology</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="page">
+
+    <h1>CAP 4744/5745 - Interactive Data Visualization</h1>
+    <h2>Project 2: World Bank Data, Science-and-Technology Dataset</h2>
+    <h2>Akash Makati</h2>
+
+    <h3>Visualization 1: Scatterplot</h3>
+    <div><svg id="vis_1" name="vis_1" class="default_svg"></svg></div>
+    <div>
+        <p> The visualization shows the relationship between scientific/technical journal articles and researchers in R&D(per mil ppl)
+            The visualization is useful because it shows that as scientific/technical journal articles are produced, the 
+            amount of researchers in R&D increases in a pretty positive correlation. This shows that the more progress we make,
+            the more people are inspired to continue to do the same.
+        </p>
+        <p> I chose to compare this data in a scatterplot because it would show a relationship between the journals and researchers
+            if there existed one. The scales were adjusted to be based off of the data sets on the mins and maxes of them which would
+            prevent data from being excluded. I also titled and labeled the both of the axis for visual clarity to prevent any confusion.
+            
+        </p>
+    </div>
+
+    <h3>Visualization 2: Line Chart</h3>
+    <div><svg id="vis_2" name="vis_2" class="default_svg"></svg></div>
+    <div>
+        <p> The line chart I created compares China, the Netherlands, the United Kingdom, and over the years in the amount of researchers
+            that existed in their countries at the time. Using the line chart, we can see that all three countries see a positive
+            correlation throughout the years. China has the least amount of researchers and we even see the UK pass the Netherlands in the
+            more recent years, Denmark being above the whole time.
+        </p>
+        <p> I chose a line chart to compare the data shown because a line chart best compares data over time and we were using time as
+            a metric for this chart. We're able to not only compare different countries but we're also to see correlations over time.
+            I made sure the lines were different colors for clarity and I added in a Legend to allow viewers to identify which country
+            is each line.
+        </p>
+    </div>
+
+    <h3>Visualization 3: Bar Chart</h3>
+    <div><svg id="vis_3" name="vis_3" class="default_svg"></svg></div>
+    <div>
+        <p> The bar chart compares the research and development expenditure in % of GDP of China, the Netherlands, the UK and Denmark in
+            2015. With the bar chart, we're able to see that Denmark spends the most % of GDP towards research and development, China and
+            the Netherlands fall behind it and the UK falls in last.
+        </p>
+        <p> I chose a bar chart to compare this data because it is intuitive to use a simple bar chart to compare numbers for different
+            countries at one point of time. It is easy to display the differences in % of GDP spent using bars that are next to each other,
+            it allows for an easy view.</p>
+    </div>
+
+    <h3>Visualization 4: Visualization Type</h3>
+    <div><svg id="vis_4" name="vis_4" class="default_svg"></svg></div>
+    <div>
+        <p>Brief description of what the visualization is trying to show about the data.</p>
+        <p>Brief description of the visualization, encoding, and embellishment rationale.</p>
+    </div>
+
+</div>
+
+
+<script>
+
+    /*************************************************/
+    /* EXAMPLE CODE FOR LOADING AND VISUALIZING DATA */
+
+    let data = null;
+    let vis_1 = null;
+    let vis_2 = null;
+    let vis_3 = null;
+    let vis_4 = null;
+
+    d3.csv("data/science-and-technology.csv", (row, i) => {
+        return {
+            researchers: +row["Researchers in R&D (per million people)"],
+            journals: +row["Scientific and technical journal articles"],
+            trademarks: +row["Trademark applications, total"],
+            country: (row["Country Name"]),
+            year: +row.Year,
+            research: +row["Research and development expenditure (% of GDP)"]
+        };
+    }).then(rows => {
+        //rows.sort(function(a,b) { return (a.year).localeCompare(b.year); });
+        data = rows;
+        
+        /*************************************************/
+        /* LINE CHARTS */
+        /*************************************************/
+        //CHINA - Line Chart
+        onlyChina = data.map(d => {
+            if (d.country === "China")
+                return {
+                    year1: d.year,
+                    researchers1: d.researchers
+                }
+        })
+        let onlyChinaFiltered = onlyChina.filter(function (x) {
+            return x != undefined;
+        })
+        onlyChinaFiltered.sort(function (a, b) {return d3.ascending(a.year1, b.year1)})
+        onlyChinaFiltered = onlyChinaFiltered.filter(function (x) {
+            if (x.researchers1 != 0)
+                return x;
+        })
+        /*************************************************/
+        //United Kingdom - Line Chart
+        onlyUnitedKingdom = data.map(d => {
+            if (d.country === "United Kingdom")
+                return {
+                    year1: d.year,
+                    researchers1: d.researchers
+                }
+        })
+        let onlyUnitedKingdomFiltered = onlyUnitedKingdom.filter(function (x) {
+            return x != undefined;
+        })
+        onlyUnitedKingdomFiltered.sort(function (a, b) {return d3.ascending(a.year1, b.year1)})
+        onlyUnitedKingdomFiltered = onlyUnitedKingdomFiltered.filter(function (x) {
+            if (x.researchers1 != 0)
+                return x;
+        })
+        /*************************************************/
+        //Netherlands - Line Chart
+        onlyNetherlands = data.map(d => {
+            if (d.country === "Netherlands")
+                return {
+                    year1: d.year,
+                    researchers1: d.researchers
+                }
+        })
+        let onlyNetherlandsFiltered = onlyNetherlands.filter(function (x) {
+            return x != undefined;
+        })
+        onlyNetherlandsFiltered.sort(function (a, b) {return d3.ascending(a.year1, b.year1)})
+        onlyNetherlandsFiltered = onlyNetherlandsFiltered.filter(function (x) {
+            if (x.researchers1 != 0)
+                return x;
+        })
+        /*************************************************/
+        //Denmark - Line Chart
+        onlyDenmark = data.map(d => {
+            if (d.country === "Denmark")
+                return {
+                    year1: d.year,
+                    researchers1: d.researchers
+                }
+        })
+        let onlyDenmarkFiltered = onlyDenmark.filter(function (x) {
+            return x != undefined;
+        })
+        onlyDenmarkFiltered.sort(function (a, b) {return d3.ascending(a.year1, b.year1)})
+        onlyDenmarkFiltered = onlyDenmarkFiltered.filter(function (x) {
+            if (x.researchers1 != 0)
+                return x;
+        })
+        /*************************************************/
+
+        /*************************************************/
+        /* BAR CHARTS */
+        /*************************************************/
+        // CHINA
+        let chinaGdp = data.map(d => {
+            if (d.country === "China" && d.year === 2015)
+                return {
+                    chinaResearch: d.research
+                }
+        })
+        chinaGdp = chinaGdp.filter(function (x) {
+            return x != undefined;
+        })
+        chinaGdpFinal = d3.mean(chinaGdp, d => d.chinaResearch)
+        /*************************************************/
+        // NETHERLANDS
+        let netherlandsGdp = data.map(d => {
+            if (d.country === "Netherlands" && d.year === 2015)
+                return {
+                    netherlandsResearch: d.research
+                }
+        }) 
+        netherlandsGdp = netherlandsGdp.filter(function (x) {
+            return x != undefined;
+        })
+        netherlandsGdpFinal = d3.mean(netherlandsGdp, d => d.netherlandsResearch)
+        /*************************************************/
+        // UNITED KINGDOM
+        let ukGdp = data.map(d => {
+            if (d.country === "United Kingdom" && d.year === 2015)
+                return {
+                    ukResearch: d.research
+                }
+        })
+        ukGdp = ukGdp.filter(function (x) {
+            return x != undefined;
+        })
+        ukGdpFinal = d3.mean(ukGdp, d => d.ukResearch)
+        /*************************************************/
+        // DENMARK
+        let denmarkGdp = data.map(d => {
+            if (d.country === "Denmark" && d.year === 2015)
+                return {
+                    denmarkResearch: d.research
+                }
+        })
+        denmarkGdp = denmarkGdp.filter(function (x) {
+            return x != undefined;
+        })
+        denmarkGdpFinal = d3.mean(denmarkGdp, d => d.denmarkResearch)
+        /*************************************************/
+        let barchartData = [
+            {
+                name: "China", research: chinaGdpFinal
+            },
+            {
+                name: "Netherlands", research: netherlandsGdpFinal
+            },
+            {
+                name: "United Kingdom", research: ukGdpFinal
+            },
+            {
+                name: "Denmark", research: denmarkGdpFinal
+            }
+        ]
+
+        vis_1 = load_scatterplotWBST("#vis_1",data)
+        vis_2 = load_linechartWBST("#vis_2", onlyChinaFiltered, onlyUnitedKingdomFiltered, onlyNetherlandsFiltered, onlyDenmarkFiltered)
+        vis_3 = load_barchartWBST("#vis_3", barchartData)
+       // console.log(barchartData)
+
+    }).catch(error => {
+        console.log(error);
+    });
+    /*************************************************/
+    
+</script>
+
+</body>
+</html>
